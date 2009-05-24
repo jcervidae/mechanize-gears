@@ -3,7 +3,7 @@
 #
 # Author: Jonathan Cervidae <jonathan.cervidae@gmail.com>
 # PGP Fingerprint: 2DC0 0A44 123E 6CC2 EB55  EAFB B780 421F BF4C 4CB4
-# Last changed: $LastEdit: 2009-05-24 18:54:26 BST$
+# Last changed: $LastEdit: 2009-05-24 19:04:49 BST$
 # Last committed: $Format:%cd$
 # File revision: $Id$
 #
@@ -44,7 +44,7 @@ class Browser(mechanize.Browser, object):
     Using it directly would be pointless, you may as well just use
     mechanize."""
     def __init__(self, factory=None, history=None, request_class=None):
-        super(Browser, self).__init__(self, factory=factory, history=history,
+        super(Browser, self).__init__(factory=factory, history=history,
                                       request_class=request_class)
         # Give me a break...
         self.set_handle_robots(False)
@@ -55,7 +55,7 @@ class Reacting(Browser):
     def __init__(self, factory=None, history=None, request_class=None):
         self.__reacting_browser_reactions__ = {}
         self.performing_predicate_action = False
-        super(Reacting, self).__init__(self, factory=factory, history=history,
+        super(Reacting, self).__init__(factory=factory, history=history,
                                        request_class=request_class)
     def add_reaction(self, predicate, action, rewind=True, reload=True,
                      reload_cookies=False):
@@ -117,7 +117,7 @@ class Reacting(Browser):
         be called directly, methods inherited from mechanize.Browser call
         it."""
         response = super(Reacting, self)._mech_open(
-            self, url, data=None, update_history=True, visit=None,
+            url, data=None, update_history=True, visit=None,
             timeout=mechanize._sockettimeout._GLOBAL_DEFAULT_TIMEOUT
         )
 
@@ -176,7 +176,7 @@ class IESpoofing(Browser):
             return(copy.copy(self))
 
     def __init__(self, factory=None, history=None, request_class=None):
-        super(IESpoofing, self).__init__(self, factory=factory,
+        super(IESpoofing, self).__init__(factory=factory,
                                         history=history,
                                         request_class=request_class)
         headers = [
@@ -204,8 +204,7 @@ class Scraping(Browser):
     which often causes problems for me when used in conjunction with pydb.
     Therefore, it is the chosen library for scraping here."""
     def __init__(self, factory=None, history=None, request_class=None):
-        pydb.debugger()
-        super(Scraping, self).__init__(self, factory=factory,
+        super(Scraping, self).__init__(factory=factory,
                                         history=history,
                                         request_class=request_class)
         self._scraper = None
@@ -234,7 +233,7 @@ class Scraping(Browser):
         it."""
         self._scraper = None
         return super(Scraping, self)._mech_open(
-            self, url, data=None, update_history=True, visit=None,
+            url, data=None, update_history=True, visit=None,
             timeout=mechanize._sockettimeout._GLOBAL_DEFAULT_TIMEOUT
         )
     class RealScraper(object):
