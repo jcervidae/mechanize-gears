@@ -3,7 +3,25 @@
 #
 # Author: Jonathan Cervidae <jonathan.cervidae@gmail.com>
 # PGP Fingerprint: 2DC0 0A44 123E 6CC2 EB55  EAFB B780 421F BF4C 4CB4
-# Last changed: $LastEdit: 2009-05-24 18:17:18 BST$
+# Last changed: $LastEdit: 2009-05-25 23:13:50 BST$
+# Last committed: $Format:%cd$
+# File revision: $Id$
+#
+# This file is part of mechanize-gears.
+#
+# mechanize-gears is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by the
+# Free Software Foundation, either version 3 of the License, or (at your
+# option) any later version.
+#
+# mechanize-gears is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+# or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details.
+#
+# You should have received a copy of the GNU General Public License along with
+# mechanize-gears in the file COPYING. If not, see
+# <http://www.gnu.org/licenses/>.
 
 from mechanize_gears import *
 import pydb
@@ -11,7 +29,6 @@ import sys
 
 if 'pydb' in sys.modules:
     sys.excepthook = pydb.exception_hook
-
 
 class SpoofAndScrape(Scraping,IESpoofing):
     pass
@@ -31,3 +48,6 @@ class TestMechanizeGears(object):
         browser.open("http://www.google.com/ncr")
         assert browser.scrape.one_by_css("img#logo").get('alt') == "Google"
 
+if __name__ == '__main__':
+    import nose
+    nose.main()

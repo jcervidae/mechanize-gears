@@ -3,25 +3,26 @@
 #
 # Author: Jonathan Cervidae <jonathan.cervidae@gmail.com>
 # PGP Fingerprint: 2DC0 0A44 123E 6CC2 EB55  EAFB B780 421F BF4C 4CB4
-# Last changed: $LastEdit: 2009-05-24 19:04:49 BST$
+# Last changed: $LastEdit: 2009-05-25 23:09:25 BST$
 # Last committed: $Format:%cd$
 # File revision: $Id$
 #
-# This file is part of mechanizebooster.
+# This file is part of mechanize-gears.
 #
-# mechanizebooster is free software: you can redistribute it and/or modify it
-# under the terms of the GNU General Public License as published by the Free
-# Software Foundation, either version 3 of the License, or (at your option)
-# any later version.
+# mechanize-gears is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by the
+# Free Software Foundation, either version 3 of the License, or (at your
+# option) any later version.
 #
-# mechanizebooster is distributed in the hope that it will be useful, but
+# mechanize-gears is distributed in the hope that it will be useful, but
 # WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
 # or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
 # more details.
 #
 # You should have received a copy of the GNU General Public License along with
-# mechanizebooster in the file COPYING. If not, see
+# mechanize-gears in the file COPYING. If not, see
 # <http://www.gnu.org/licenses/>.
+
 """This module are some extenstions to the mechanize Browser object which add
 some useful functionality"""
 

@@ -1,0 +1,8 @@
+This adds some useful functionality to the mechanize scraping tool. It uses
+lxml not BeautifulSoup and provides a nice interface to it via the
+mechanize_gears.Scraping class.
+
+You can inherit from multiple classes from mechanize_gears in your own class
+to gain the features of all of them, i.e. inherit IE Spoofing and Scraping.
+
+Add stuff, take it from here put it into mechanize... do as ye will...
